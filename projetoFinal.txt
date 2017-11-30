@@ -1,0 +1,241 @@
+PROJETO DE ALGORITMO E LÓGICA DE PROGRAMAÇÃO (https://repl.it/Nhpn/1)
+
+#include <stdio.h>
+#include<stdlib.h>
+#include<math.h>
+#include<time.h>
+
+void menu1(void){
+  
+    int idioma = 0;
+  
+    printf("(1) English\n");
+    printf("(2) Portuguese\n");
+    printf("Select your language:");
+}
+
+void menuing(void){
+
+    printf("\n");
+    printf("MATRIX MANIPULATION PROGRAM\n");
+    printf("(1) Size of matrix A\n");
+    printf("(2) Size of matrix B\n");
+    printf("(3) Fill matrix A with random numbers\n");
+    printf("(4) Fill matrix B with random numbers\n");
+    printf("(5) Assign a value to an element of A\n");
+    printf("(6) Assign a value to an element of B\n");
+    printf("(7) Add the matrices (C=A+B)\n");
+    printf("(8) Subtract the matrices (C=A-B)\n");
+    printf("(9) Multiply the matrices (C=A*B)\n");
+    printf("(10) Show matrix A\n");
+    printf("(11) Show matrix B\n");
+    printf("(12) Show matrix C\n");
+    printf("(13) Change language\n");
+    printf("(14) Exit\n");
+
+    printf("Choose an option:");
+}
+
+void menuport(void){
+    
+    printf("\n");
+    printf("PROGRAMA DE MANIPULAÇÃO DE MATRIZES\n");
+    printf("(1) Tamanho da matriz A\n");
+    printf("(2) Tamanho da matriz B\n");
+    printf("(3) Preencher matriz A com valores aleatorios\n");
+    printf("(4) Preencher matriz B com valores aleatorios\n");
+    printf("(5) Atribuir valor para um elemento de A\n");
+    printf("(6) Atribuir valor para um elemento de B\n");
+    printf("(7) Soma das matrizes (C=A+B)\n");
+    printf("(8) Subtracao das matrizes (C=A-B)\n");
+    printf("(9) Multiplicacao das matrizes (C=A*B)\n");
+    printf("(10) Mostrar matriz A\n");
+    printf("(11) Mostrar matriz B\n");
+    printf("(12) Mostrar matriz C\n");
+    printf("(13) Mudar de idioma\n");
+    printf("(14) Sair\n");
+
+    printf("Digite a opcao:");
+}
+
+float showA (){
+  
+  float matrixA[20][20];
+  int i, j, iA, jA;
+  
+  iA=5;
+  jA=5;
+  
+  srand(time(0));
+
+  for(i=0; i<iA; i++){
+    for(j=0; j<jA; j++){
+      matrixA[i][j] = rand()%100;
+    }
+  }
+  
+  printf("MATRIX A:\n");
+  for(i=0;i<iA;i++){
+    for(j=0;j<jA;j++){
+      printf("%2.2f ", matrixA[i][j]);
+    }
+    printf("\n");
+  }
+}
+
+float showB (){
+  
+  float matrixB[20][20];
+  int i, j, iB, jB;
+  
+  iB=5;
+  jB=5;
+  
+  srand(time(0));
+
+  for(i=0; i<iB; i++){
+    for(j=0; j<jB; j++){
+      matrixB[i][j] = rand()%100;
+    }
+  }
+  
+  printf("MATRIX B:\n");
+  for(i=0;i<iB;i++){
+    for(j=0;j<jB;j++){
+      printf("%2.2f ", matrixB[i][j]);
+    }
+    printf("\n");
+  }
+}
+
+float showC (){
+  
+  float matrixC[20][20];
+  int i, j, iC, jC;
+  
+  iC=5;
+  jC=5;
+  
+  srand(time(0));
+
+  for(i=0; i<iC; i++){
+    for(j=0; j<jC; j++){
+      matrixC[i][j] = rand()%100;
+    }
+  }
+  
+  printf("MATRIX C:\n");
+  for(i=0;i<iC;i++){
+    for(j=0;j<jC;j++){
+      printf("%2.2f ", matrixC[i][j]);
+    }
+    printf("\n");
+  }
+}
+
+int main(){
+
+    int opcao, idioma;
+
+    opcao = 0;
+    
+    menu1();
+    scanf("%d", &idioma);
+    
+    do{
+       if(idioma == 2){
+        menuport();
+       }else{
+          menuing();
+       }
+        scanf("%d", &opcao);
+        switch (opcao){
+          
+        // O usuário determina o número de linhas e colunas da matriz A
+        case 1:   
+            //sizeA();
+            break;
+        
+        // O usuário determina o número de linhas e colunas da matriz B
+        case 2:
+            //sizeB();
+            break;
+            
+        // A matriz A será preenchida com valores aleatórios
+        case 3:
+            //fillA();
+            break;
+            
+        // A matriz B será preenchida com valores aleatórios
+        case 4:
+            //fillB();
+            break;
+        
+        // O usuário irá selecionar a linha e coluna de um elemento de A para atribuir um valor
+        case 5:
+            //assignA();
+            break;
+        
+        // O usuário irá selecionar a linha e coluna de um elemento de B para atribuir um valor
+        case 6:
+            //assignB();
+            break;
+        
+        // Realiza a soma da matriz A com B e o resultado será guardado na matriz C
+        case 7:
+            //sum();
+            break;
+        
+        // Realiza a subtraçõa da matriz A com B e o resultado será guardado na matriz C
+        case 8:
+            //sub();
+            break;
+        
+        // Realiza a multiplicacao da matriz A com B e o resultado será guardado na matriz C
+        case 9:
+            //mult();
+            break;
+        
+        // Mostra a matriz A
+        case 10:
+            showA();
+            break;
+        
+        // Mostra a matriz B
+        case 11:
+            showB();
+            break;
+        
+        // Mostra a matriz C;
+        case 12:
+            showC();
+            break;
+        
+        // Abre o menu para mudar o idioma do programa
+        case 13:
+            menu1();
+            scanf("%d", &idioma);
+            break;
+        
+        // Quando o usuário sair do do programa
+        case 14:
+            if(idioma == 2){
+                printf("PROGRAMA ENCERRADO!\n");
+            }else{
+                printf("END OF THE PROGRAM!\n");
+            }
+            break;
+            
+        // Quando o usuário digitar uma opcão que não consta no menu
+        default:
+            if(idioma == 2){
+                printf("Escolha uma opcao disponivel!\n");
+            }else{
+                printf("Choose an available option!\n");
+            }
+        }
+
+    } while (opcao != 14);
+
+    return 0;
+}
