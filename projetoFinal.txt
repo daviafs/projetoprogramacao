@@ -1,4 +1,6 @@
-PROJETO DE ALGORITMO E LÓGICA DE PROGRAMAÇÃO (https://repl.it/Nhpn/1)
+PROJETO DE ALGORITMO E LÓGICA DE PROGRAMAÇÃO 
+
+(https://repl.it/Nhpn/1)
 
 #include <stdio.h>
 #include<stdlib.h>
