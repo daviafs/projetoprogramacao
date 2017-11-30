@@ -3,83 +3,206 @@
 #include<math.h>
 #include<time.h>
 
-int tamA(){,
+#include <stdio.h>
+#include<stdlib.h>
+#include<math.h>
+#include<time.h>
+
+struct sizematrix{
+  int numberlines;
+  int numbercolumns;
+}M;
+struct sizematrix size(){
+  struct sizematrix M;
            //Fill the number of lines and columns;
-  printf("How many lines do you want in your matrix A?");
-  scanf("%d",&iA);
-  printf("How many columns do you want in your matrix A?");
-  sacanf("%d",&jA);
+  printf("How many lines do you want in your matrix?");
+  scanf("%d",&M.numberlines);
+  printf("How many columns do you want in your matrix?");
+  scanf("%d",&M.numbercolumns);
   
-    return 0;
+    return M;
 }
 
-
-int tamB(){
-    //Fill the number of lines and columns;
-  printf("How many lines do you want in your matrix B?");
-  scanf("%d",&iB);
-  printf("How many columns do you want in your matrix B?");
-  sacanf("%d",&jB;
+void Rand(void){
+  srand((unsigned int)time(NULL));
+  rand();
+  rand();
+  rand();
   
-    return 0;
 }
 
-
-int fillA(int iA, int jA){
- int num=0;
- int num1=0;
- float matrixA[20][20];
+void fill(float matrix[20][20], int lines, int columns){
+int num=0;
+int num1=0;
+int number=0;
+         //Para gerar numeros aleotorios flutuantes será preciso usar a função variavel=(float)(rand())/(float)(RAND_MAX)*100.0
          
- for(num=0;num<=iA;num++){
-     for(num1=0;num1<=jA;num1++){
-         srand(time(0));
-         matrixA[iA][jA]=rand()%100;
-     }
- }
-}
-
-
-int fillB(int iB, int jB){
- int num=0;
- int num1=0;
- float matrixB[20][20];
+         printf("\n==========Your matrix A is just below=========\n\n");
+         if(number==0){
+           Rand();
+         }else{
+           srand(time(NULL));
+         }
+  for(num=0;num<=lines-1;num++){
+     for(num1=0;num1<=columns-1;num1++){
+         number++;
          
- for(num=0;num<=iB;num++){
-     for(num1=0;num1<=jB;num1++){
-         srand(time(0));
-         matrixB[i][j]=rand()%100;
+         matrix[num][num1]=(float)(rand())/(float)(RAND_MAX)*100.0;
+         if(num1==0){
+           printf("                   ");
+         }
+         if(matrix[num][num1]<10){
+         printf("%.2f ",matrix[num][num1]);
+         }else{
+           printf("%f ",matrix[num][num1]);
+         }
+          
+
      }
- }
+      printf("\n");
 }
 
-int assignA(int iA, int jA){
+
+number++;
+}
+
+void filL(float matrix[20][20], int lines, int columns){
+int num=0;
+int num1=0;
+int number=0;
+         //Para gerar numeros aleotorios flutuantes será preciso usar a função variavel=(float)(rand())/(float)(RAND_MAX)*100.0
+   
+         
+         printf("\n==========Your matrix A is just below=========\n\n");
+         if(number==0){
+           Rand();
+         }else{
+           srand(time(NULL));
+         }
+  for(num=0;num<=lines-1;num++){
+     for(num1=0;num1<=columns-1;num1++){
+         number++;
+         
+         matrix[num][num1]=(float)(rand())/(float)(RAND_MAX)*100.0;
+         if(num1==0){
+           printf("                   ");
+         }
+         if(matrix[num][num1]<10){
+         printf("%.2f ",matrix[num][num1]);
+         }else{
+           printf("%f ",matrix[num][num1]);
+         }
+          
+
+     }
+      printf("\n");
+}
+}
+
+void assign(float matrix[20][20], int iA, int jA){
     int num=0;
     int num1=0;
-    float matrixA[20][20];
             
     for(num=0;num<iA;num++){
         for(num1=0;num1<jA;num1++){
-            printf("\nType the valor of the place A[%d][%d]: ",num,num1);
-            scanf("%f",&matrixA[num][num1]);
+            printf("\nType the valor of the place [%d][%d]: ",num+1,num1+1);
+            scanf("%f",&matrix[num][num1]);
         }
     }
+    
    }
 
-int assignB(int iB, int jB){
-    int num=0;
-    int num1=0;
-    float matrixB[20][20];
-            
-    for(num=0;num<iB;num++){
-        for(num1=0;num1<jB;num1++){
-            printf("\nType the valor of the place A[%d][%d]: ",num,num1);
-            scanf("%f",&matrixB[num][num1]);
-        }
+
+void sum(float matrixA[20][20], float matrixB[20][20], float matrixC[20][20], int linhA,int colunA,int linhB,int colunB,int linhC,int colunC){
+  int num,num1;
+  if((linhA==linhB)&&(colunA==colunB)){
+    linhC=linhA;
+    colunC=colunA;
+    for(num=0;num<=linhC-1;num++){
+      for(num1=0;num1<=colunC-1;num1++){
+        matrixC[num][num1]=matrixA[num][num1]+matrixB[num][num1];
+        printf(" %f",matrixC[num][num1]);
+      }
+      printf("\n");
     }
-   }
+  }else{
+    printf("\nYou can't make the sum because the size of your arrays different\n");
+  }
+   
+}
 
-int sum(float matrixA; matrixB){
-    sumMatrix[20][20];
-    for(
-        )
+float sub(float matrixA[20][20], float matrixB[20][20], float matrixC[20][20], int linhA,int colunA,int linhB,int colunB,int linhC,int colunC){
+  int num,num1;
+  if((linhA==linhB)&&(colunA==colunB)){
+    linhC=linhA;
+    colunC=colunA;
+    for(num=0;num<=linhC-1;num++){
+      for(num1=0;num1<=colunC-1;num1++){
+        matrixC[num][num1]=matrixA[num][num1]-matrixB[num][num1];
+        printf(" %f",matrixC[num][num1]);
+      }
+      printf("\n");
+    }
+  }else{
+    printf("\nYou can't make the subtraction because the size of your arrays different\n");
+  }
+   
+}
+
+void mult(float matrixA[20][20], float matrixB[20][20], int matrixC[20][20], int linhA,int colunA,int linhB,int colunB,int linhC,int colunC){
+printf("oi");
+  int i,j, X, num=0, sum=0;
+
+  if(colunA==linhB){
+    linhC=linhA;
+    colunC=colunB;
+    printf("linb= %d\n\n\n", linhB);
+   printf("oi");
+    for(i=0; i<linhC; i++)
+{ printf("oi");
+        for(j=0; j<colunC; j++)
+        {printf("oi");
+                 
+                 for(X=0; X<linhB; X++)
+                 {
+
+                   printf("aix = %d\n",matrixA[i][X]);
+                   printf("bxj = %d\n",matrixB[X][j]);
+
+                 matrixC[i][j] =  matrixC[i][j]+(matrixA[i][X] * matrixB[X][j]) ;
+
+                 }
+               
+                 }
+
+  }}else{
+printf("Have worries")    ;
+  }
+}
+
+void show( float matrix[20][20],int linha,int coluna){
+  int i,j;
+  
+  for(i=0;i<=linha-1;i++){
+    for(j=0;j<=coluna-1;j++){
+      printf("%f ",matrix[i][j]);
+    }
+    printf("\n");
+  }
+}
+
+int main(){
+  struct sizematrix B;
+  struct sizematrix A;
+  float matrixA[20][20], matrixB[20][20], matrixC[20][20];
+  int liinhC,coolunC;
+  float i, j;
+  A=size();
+  assign(matrixA,A.numberlines,A.numberlines);
+  show(matrixA,A.numberlines,A.numbercolumns);
+  B=size();
+  assign(matrixB,B.numberlines,B.numberlines);
+  mult(matrixA,matrixB,matrixC,A.numberlines,A.numbercolumns,B.numberlines,B.numbercolumns,liinhC,coolunC);
+  show(matrixC,liinhC,coolunC);
+  
 }
