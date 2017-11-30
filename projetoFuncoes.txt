@@ -1,0 +1,85 @@
+#include <stdio.h>
+#include<stdlib.h>
+#include<math.h>
+#include<time.h>
+
+int tamA(){,
+           //Fill the number of lines and columns;
+  printf("How many lines do you want in your matrix A?");
+  scanf("%d",&iA);
+  printf("How many columns do you want in your matrix A?");
+  sacanf("%d",&jA);
+  
+    return 0;
+}
+
+
+int tamB(){
+    //Fill the number of lines and columns;
+  printf("How many lines do you want in your matrix B?");
+  scanf("%d",&iB);
+  printf("How many columns do you want in your matrix B?");
+  sacanf("%d",&jB;
+  
+    return 0;
+}
+
+
+int fillA(int iA, int jA){
+ int num=0;
+ int num1=0;
+ float matrixA[20][20];
+         
+ for(num=0;num<=iA;num++){
+     for(num1=0;num1<=jA;num1++){
+         srand(time(0));
+         matrixA[iA][jA]=rand()%100;
+     }
+ }
+}
+
+
+int fillB(int iB, int jB){
+ int num=0;
+ int num1=0;
+ float matrixB[20][20];
+         
+ for(num=0;num<=iB;num++){
+     for(num1=0;num1<=jB;num1++){
+         srand(time(0));
+         matrixB[i][j]=rand()%100;
+     }
+ }
+}
+
+int assignA(int iA, int jA){
+    int num=0;
+    int num1=0;
+    float matrixA[20][20];
+            
+    for(num=0;num<iA;num++){
+        for(num1=0;num1<jA;num1++){
+            printf("\nType the valor of the place A[%d][%d]: ",num,num1);
+            scanf("%f",&matrixA[num][num1]);
+        }
+    }
+   }
+
+int assignB(int iB, int jB){
+    int num=0;
+    int num1=0;
+    float matrixB[20][20];
+            
+    for(num=0;num<iB;num++){
+        for(num1=0;num1<jB;num1++){
+            printf("\nType the valor of the place A[%d][%d]: ",num,num1);
+            scanf("%f",&matrixB[num][num1]);
+        }
+    }
+   }
+
+int sum(float matrixA; matrixB){
+    sumMatrix[20][20];
+    for(
+        )
+}

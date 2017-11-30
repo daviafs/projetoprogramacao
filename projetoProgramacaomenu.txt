@@ -1,0 +1,60 @@
+PROJETO DE ALGORITMO E LÓGICA DE PROGRAMAÇÃO
+
+-> Montando o menu:
+
+#include <stdio.h>
+
+void menu(void){
+
+    printf("1 - somar\n");
+    printf("2 - subtrair\n");
+    printf("3 - multiplicar\n");
+    printf("4 - dividir\n");
+    printf("5 - ler x\n");
+    printf("6 - ler y\n");
+    printf("7 - sair\n");
+
+    printf("Digite a opcao: ");
+}
+
+int main(){
+
+    int opcao, x, y;
+
+    opcao = 0;
+
+   do{
+        menu();
+        scanf("%d", &opcao);
+        switch (opcao){
+        case 1:
+            printf("soma = %d\n", x+y);
+            break;
+        case 2:
+            printf("subtracao = %d\n", x-y);
+            break;
+        case 3:
+            printf("multiplicacao = %d\n", x*y);
+            break;
+        case 4:
+            printf("divisao = %d\n", x/y);
+            break;
+        case 5:
+            printf("digite x: ");
+            scanf("%d", &x);
+            break;
+        case 6:
+            printf("digite y: ");
+            scanf("%d", &y);
+            break;
+        default:
+            printf("escolheu outra opcao");
+
+        }
+
+    } while (opcao != 7);
+
+    return 0;
+}
+
+

@@ -1,0 +1,7 @@
+Sites para o git
+
+* https://git-scm.com/ (para baixar a ferramenta)
+* https://education.github.com/pack (para conseguir a licença de estudante)
+* http://rogerdudler.github.io/git-guide/index.pt_BR.html (tutorial)
+
+(/c/Users/D2/.ssh/id_rsa)
