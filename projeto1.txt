@@ -1,7 +1,6 @@
 PROJETO DE ALGORITMOS E LÓGICA DE PROGRAMAÇÃO 
 
-Link Online: 
-https://repl.it/NxTg/8
+Link Online: https://repl.it/NxTg/8
 
 #include <stdio.h>
 #include<stdlib.h>
