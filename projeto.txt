@@ -1,4 +1,4 @@
-PROJETO DE ALGORITMOS E LÓGICA DE PROGRAMAÇÃO 
+PROJETO DE ALGORITMOS E LÓGICA DE PROGRAMAÇÃO - teste
 
 #include <stdio.h>
 #include<stdlib.h>
